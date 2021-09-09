@@ -23,4 +23,21 @@ function checkHour() {
     })
 }
 
+// saves new items added to the planner in local storage
+$(".saveBtn").on("click", function() {
+    var hour = $(this).parent().attr("data-hour");
+    var description = $(this).siblings(".description").val();
 
+    localStorage.setItem(hour, description);
+})
+
+// puts anything from local storage back into the correct box
+function checkStorage() {
+    $(".time-block").each(function() {
+        var hour = $(this).attr("data-hour");
+        $(this).children(".description").val(localStorage.getItem(hour));
+    })
+}
+
+checkHour();
+checkStorage();
