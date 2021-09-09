@@ -7,8 +7,6 @@ $("#currentDay").text(moment().format("dddd, MMMM Do"));
 function checkHour() {
     $(".time-block").each(function() {
         var hour = parseInt($(this).attr("data-hour"));
-        console.log(typeof hour);
-        console.log(typeof currentHour);
 
         if (hour < currentHour) {
             $(this).addClass("past");

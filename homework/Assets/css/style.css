@@ -40,6 +40,7 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  padding-top: 15px;
 }
 
 .past {
@@ -63,6 +64,16 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.fa-save {
+  line-height: inherit;
+}
+
+i {
+ align-self: center;
 }
 
 .saveBtn i:hover {
